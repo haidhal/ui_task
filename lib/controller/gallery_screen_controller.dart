@@ -20,6 +20,7 @@ class GalleryScreenController extends ChangeNotifier {
       if (res.statusCode == 200) {
         log(res.statusCode.toString());
         imageList = productResModelFromJson(res.body);
+        isLoading = false;
         notifyListeners();
         log("Parsed imageList: ${imageList!.photos!.length} items");
       } else {

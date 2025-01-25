@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.green,
         centerTitle: true,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               Icons.location_on,

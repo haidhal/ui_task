@@ -56,9 +56,13 @@ class _GalleryScreenState extends State<GalleryScreen> {
                     itemBuilder: (context, index) {
                       final photo = imageProvider.imageList!.photos![index];
                       return Container(
-                          color: Colors.yellow,
-                          child: Image.network(photo.src?.medium ??
-                              "https://via.placeholder.com/150"));
+                        color: Colors.yellow,
+                        child: Image.network(
+                          photo.src?.medium ??
+                              "https://via.placeholder.com/150",
+                          fit: BoxFit.cover,
+                        ),
+                      );
                     }),
       ),
     );
